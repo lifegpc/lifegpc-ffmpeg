@@ -6,6 +6,7 @@ FLAGS=--disable-doc
 FLAGS+=' --enable-gpl'
 FLAGS+=' --enable-gmp'
 FLAGS+=' --enable-gnutls'
+FLAGS+=' --enable-libaom'
 FLAGS+=' --enable-libass'
 FLAGS+=' --enable-libfontconfig'
 FLAGS+=' --enable-libfreetype'

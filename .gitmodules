@@ -4,3 +4,6 @@
 [submodule "x264"]
 	path = x264
 	url = https://code.videolan.org/videolan/x264.git
+[submodule "aom"]
+	path = aom
+	url = https://aomedia.googlesource.com/aom

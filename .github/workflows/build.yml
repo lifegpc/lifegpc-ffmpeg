@@ -49,6 +49,9 @@ jobs:
       - name: Build x264
         run: ./build_x264.sh
 
+      - name: Build aom
+        run: ./build_aom.sh
+
       - name: Configure
         run: ./configure.sh
 
