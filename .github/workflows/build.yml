@@ -48,17 +48,17 @@ jobs:
       - name: Setup
         run: ./setup.sh
 
-      - name: Build x264
-        run: ./build_x264.sh
-
-      - name: Build aom
-        run: ./build_aom.sh
-
       - name: Clone x265
         run: hg clone http://hg.videolan.org/x265
 
       - name: Build x265
         run: ./build_x265.sh
+
+      - name: Build x264
+        run: ./build_x264.sh
+
+      - name: Build aom
+        run: ./build_aom.sh
 
       - name: Configure
         run: ./configure.sh
