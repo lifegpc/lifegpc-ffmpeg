@@ -35,6 +35,7 @@ jobs:
             git
             p7zip
             mingw64/mingw-w64-x86_64-bzip2
+            mingw64/mingw-w64-x86_64-cmake
             mingw64/mingw-w64-x86_64-curl
             mingw64/mingw-w64-x86_64-diffutils
             mingw64/mingw-w64-x86_64-gcc
