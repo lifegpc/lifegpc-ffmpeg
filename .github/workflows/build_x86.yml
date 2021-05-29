@@ -33,6 +33,7 @@ jobs:
           install: >-
             base-devel
             git
+            mercurial
             p7zip
             mingw32/mingw-w64-i686-bzip2
             mingw32/mingw-w64-i686-cmake
@@ -52,6 +53,12 @@ jobs:
 
       - name: Build aom
         run: ./build_aom_x86.sh
+
+      - name: Clone x265
+        run: hg clone http://hg.videolan.org/x265
+
+      - name: Build x265
+        run: ./build_x265_x86.sh
 
       - name: Configure
         run: ./configure_x86.sh
