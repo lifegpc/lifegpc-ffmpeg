@@ -1,0 +1,12 @@
+diff -r e7d0e439852a source/CMakeLists.txt
+--- a/source/CMakeLists.txt	Tue May 25 12:20:03 2021 +0530
++++ b/source/CMakeLists.txt	Sat May 29 23:49:19 2021 +0000
+@@ -296,7 +296,7 @@
+     endif(FPROFILE_USE)
+     if(STATIC_LINK_CRT)
+         add_definitions(-static)
+-        list(APPEND LINKER_OPTIONS "-static-libgcc")
++        list(APPEND LINKER_OPTIONS "-static")
+     endif(STATIC_LINK_CRT)
+     check_cxx_compiler_flag(-Wno-strict-overflow CC_HAS_NO_STRICT_OVERFLOW)
+     check_cxx_compiler_flag(-Wno-narrowing CC_HAS_NO_NARROWING) 
