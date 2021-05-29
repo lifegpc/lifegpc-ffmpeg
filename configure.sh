@@ -17,7 +17,8 @@ FLAGS+=' --enable-libx265'
 FLAGS+=' --enable-libxml2'
 FLAGS+=' --enable-small'
 FLAGS+=' --enable-version3'
+FLAGS+=' --extra-ldflags=-static'
 FLAGS+=' --pkg-config-flags=--static'
 FLAGS+=" --prefix=$loc"
-./configure $FLAGS "--extra-ldflags=-static -static-libgcc"
+./configure $FLAGS
 echo $?
