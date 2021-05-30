@@ -20,5 +20,5 @@ FLAGS+=' --enable-version3'
 FLAGS+=' --extra-ldflags=-static'
 FLAGS+=' --pkg-config-flags=--static'
 FLAGS+=" --prefix=$loc"
-./configure $FLAGS
+./configure $FLAGS "--extra-libs=-L/mingw64/lib -lstdc++ -lgcc_s -lgcc"
 echo $?
