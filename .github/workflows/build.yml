@@ -48,6 +48,13 @@ jobs:
       - name: Setup
         run: ./setup.sh
 
+      - name: Remove Dynamic-link Library
+        run: |
+          rm -rfv /mingw*/lib/gcc/*-w64-mingw32/*/libstdc++*.dll*
+          rm -rfv /mingw*/lib/gcc/*-w64-mingw32/*/libgcc_s*
+          rm -rfv /mingw*/lib/gcc/*-w64-mingw32/*/*.dll.a
+          rm -rfv /mingw*/lib/*.dll.a
+
       - name: Clone x265
         run: hg clone http://hg.videolan.org/x265
 
