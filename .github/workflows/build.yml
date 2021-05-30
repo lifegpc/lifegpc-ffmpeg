@@ -51,7 +51,6 @@ jobs:
       - name: Remove Dynamic-link Library
         run: |
           rm -rfv /mingw*/lib/gcc/*-w64-mingw32/*/libstdc++*.dll*
-          rm -rfv /mingw*/lib/gcc/*-w64-mingw32/*/libgcc_s*
           rm -rfv /mingw*/lib/gcc/*-w64-mingw32/*/*.dll.a
           rm -rfv /mingw*/lib/*.dll.a
 

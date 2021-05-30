@@ -5,9 +5,9 @@ mkdir x265-build
 cd x265-build
 cmake -G "MSYS Makefiles" -DWINXP_SUPPORT=OFF -DENABLE_CLI=OFF \
     -DENABLE_SHARED=OFF -DCMAKE_INSTALL_PREFIX=/mingw64 -DHIGH_BIT_DEPTH=ON \
-    -DMAIN12=ON DCMAKE_ASM_NASM_FLAGS=-w-macro-params-legacy ../source
-make
-make install
+    -DMAIN12=ON DCMAKE_ASM_NASM_FLAGS=-w-macro-params-legacy ../source || exit 1
+make || exit 1
+make install || exit 1
 cd ../..
 mkdir x265-debug
 cd x265-debug
