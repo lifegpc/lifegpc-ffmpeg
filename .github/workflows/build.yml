@@ -54,6 +54,12 @@ jobs:
       - name: Build x265
         run: ./build_x265.sh
 
+      - name: Upload x265 Debug File
+        uses: actions/upload-artifact@v2
+        with:
+          name: x265-debug
+          path: x265-debug.7z
+
       - name: Build x264
         run: ./build_x264.sh
 

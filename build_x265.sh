@@ -8,3 +8,15 @@ cmake -G "MSYS Makefiles" -DWINXP_SUPPORT=OFF -DENABLE_CLI=OFF \
     -DMAIN12=ON -DENABLE_ASSEMBLY=OFF -DSTATIC_LINK_CRT=ON ../source
 make
 make install
+cd ../..
+mkdir x265-debug
+cd x265-debug
+mkdir lib
+cp -v /mingw64/lib/libx265.a lib/
+cd lib
+mkdir pkgconfig
+cp -v /mingw64/lib/pkgconfig/x265.pc pkgconfig/
+cd ..
+mkdir include
+cp -v /mingw64/include/x265* include/
+7z a -mx9 -y ../x265-debug.7z *
